@@ -1,0 +1,56 @@
+body {
+    background-image: url("img.png");
+    background-repeat: no-repeat;
+    background-size: 90%;
+    background-attachment: fixed;
+    background-position: center;
+}
+.container {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+}
+.card {
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+.country,
+.capital {
+    border-style: solid;
+    border-color: darkgray;
+    width: 130px;
+    height: 130px;
+    text-align: center;
+    border-radius: 15px;
+    font-family: "Roboto", serif;
+}
+.capital {
+    background-color: darkorange;
+    position: absolute;
+    transform: rotateY(180deg) translate(0, -135px);
+    z-index: -1;
+}
+.country {
+    background-color: #F5F5DC;
+    backface-visibility: hidden;
+}
+.country_text {
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+}
+.capital_text {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.card:hover {
+    transform: rotateY(180deg);
+}
+h1 {
+    color: darkgray;
+    text-align: center;
+    font-family: "Roboto", serif;
+}
